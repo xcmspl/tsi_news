@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1" client="site" method="upgrade">
+    <name>TSI News</name>
+    <author>Design Cart</author>
+	<copyright>Copyright (C) 2011-2016 Design Studio WWW All rights reserved.</copyright>
+    <version>1.0.0</version>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description>The module display news.</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_tsinews.ini</language>
+		<language tag="pl-PL">pl-PL.mod_tsinews.ini</language>
+	</languages>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="TSI News Update Server">https://www.tsi.info.pl/modules/tsi_news.xml</server>
+	</updateservers>
+	
+	
+    <files>
+        <filename>mod_tsinews.xml</filename>
+        <filename module="mod_tsinews">mod_tsinews.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<filename>assest/mod_tsinews.css</filename>
+		<filename>assest/img.png</filename>
+		<filename>assest/owl_carousel/grabbing.png</filename>
+		<filename>assest/owl_carousel/owl.carousel.css</filename>
+		<filename>assest/owl_carousel/owl.carousel.min.js</filename>
+		<filename>assest/owl_carousel/owl.theme.css</filename>
+		<filename>assest/lib/tsi_news.php</filename>
+		<filename>assest/elements/item.php</filename>
+		<filename>assest/theme/carousel.php</filename>
+		<filename>assest/theme/grid.php</filename>
+    </files>
+	<config>
+		<fields name="params">
+		
+			<fieldset name="basic">
+                <field name="category" multiple="true" type="category" extension="com_content" label="TSINEWS_CATEGORY" description="" />
+                <field name="count" type="integer" default="3" label="TSINEWS_COUNT" description="" first="1" last="16" step="1" />
+                <field name="columns" type="radio" class="btn-group btn-group-yesno" default="1" label="TSINEWS_COLUMNS" description="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+				</field>
+                                
+                <field name="theme" type="list" default="" label="TSINEWS_THEME" description="">
+                    <option value="grid">Grid</option>
+                    <option value="carousel">Carousel</option>
+                </field>
+				<field name="more" type="text" label="TSINEWS_MORE" description="" />
+			</fieldset>
+			
+		</fields>
+	</config>
+    
+</extension>
+
+

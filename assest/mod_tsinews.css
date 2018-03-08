@@ -1,0 +1,13 @@
+﻿.news-item-container{
+	padding:15px;				
+}
+.news-title h3{
+	text-align:center;	
+	margin-top:10px;			
+}
+.news-item-container .news-desc{
+	text-align:center;			
+}
+.news-item-container .news-more{
+	text-align:center;			
+}
